@@ -18,6 +18,13 @@ jobs:
       - name: Checks-out my repository
         uses: actions/checkout@v2
 
+                    
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.4.0
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '21'
+
       - name: Clone repository
         uses: actions/checkout@v4
       - name: Set up Flutter
